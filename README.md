@@ -32,7 +32,7 @@ bpush.sendRequest(bpush.apis.pushMsgToSingleDevice, data).then(function (data) {
 [百度官方文档](http://push.baidu.com/doc/restapi/restapi)   
 **特别说明:** 本文档写作时,百度api返回的数据以本文档为准,与官方文档有出入的地方可能是百度升级了api忘记更新文档所致.   
 + pushSingleDevice   
-功能:推送单一终端
+功能:推送单一终端   
 请求参数:
 ```javascript
 var data = {
@@ -57,8 +57,8 @@ var data = {
     }
 }
 ```
-+ pushMsgToAll
-功能:推送所有终端
++ pushMsgToAll   
+功能:推送所有终端   
 请求参数:
 ```javascript
 var data = {
@@ -82,8 +82,8 @@ var data = {
     }
 }
 ```
-+ pushMsgToTag
-功能:组播推送
++ pushMsgToTag   
+功能:组播推送   
 请求参数:
 ```javascript
 var data = {
@@ -109,8 +109,8 @@ var data = {
     }
 }
 ```
-+ queryMsgStatus
-功能:查询消息推送情况
++ queryMsgStatus   
+功能:查询消息推送情况   
 请求参数:
 ```javascript
 var data = {
@@ -135,8 +135,8 @@ var data = {
     }
 }
 ```
-+ queryTags
-功能:查询标签组列表
++ queryTags   
+功能:查询标签组列表   
 请求参数:
 ```javascript
 var data = {
@@ -181,8 +181,8 @@ var data = {
     }
 }
 ```
-+ createTag
-功能:创建标签组
++ createTag   
+功能:创建标签组   
 请求参数:
 ```javascript
 var data = {
@@ -199,8 +199,8 @@ var data = {
     }
 }
 ```
-+ deleteTag
-功能:删除标签组
++ deleteTag   
+功能:删除标签组   
 请求参数:
 ```javascript
 var data = {
@@ -217,8 +217,8 @@ var data = {
     }
 }
 ```
-+ addDevicesToTag
-功能:添加设备到标签组
++ addDevicesToTag   
+功能:添加设备到标签组   
 请求参数:
 ```javascript
 var data = {
@@ -240,8 +240,8 @@ var data = {
     }
 }
 ```
-+ removeDevicesFromTag
-功能:将设备从标签组中移除
++ removeDevicesFromTag   
+功能:将设备从标签组中移除   
 请求参数:
 ```javascript
 var data = {
@@ -263,8 +263,8 @@ var data = {
     }
 }
 ```
-+ deviceNumInTag
-功能:查询标签组设备数量
++ deviceNumInTag   
+功能:查询标签组设备数量   
 请求参数:
 ```javascript
 var data = {
@@ -280,8 +280,8 @@ var data = {
     }
 }
 ```
-+ reportStaticDevice
-功能:当前应用的设备统计信息
++ reportStaticDevice   
+功能:当前应用的设备统计信息   
 请求参数:
 ```javascript
 var data = {
@@ -336,5 +336,3 @@ var data = {
 ```
 ##作者博客
 [每天进步一点点](http://www.ddhigh.com)
-##捐赠作者
-<form style="padding:12px;display:inline-block" action="https://shenghuo.alipay.com/send/payment/fill.htm" method="POST" target="_blank" accept-charset="GBK" rel="nofollow" ><input name="optEmail" type="hidden" value="13660524684"><input name="payAmount" type="hidden" value="10"><input name="memo" type="hidden" value="留下您的联系方式"><input name="pay" type="image" value="转账" src="http://p9.qhimg.com/dr/250_500_/t0179d5f0ba33f3e631.png" width="48" height="48" style="width:48px;height:48px;outline:0"></form>
