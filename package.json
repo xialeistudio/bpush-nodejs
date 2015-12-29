@@ -1,6 +1,6 @@
 {
   "name": "bpush-nodejs",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "baidu push nodejs sdk",
   "main": "index.js",
   "scripts": {
