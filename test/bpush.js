@@ -7,11 +7,12 @@ var bpush = require('../lib/bpush')
     , _ = require('underscore');
 require('should');
 
-bpush.config.ak = '百度推送ak';
-bpush.config.sk = '百度推送sk';
+bpush.config.ak = 'zCk3iH4tU2Yt8jBUL3IYYqa6';
+bpush.config.sk = 'GagIvf8I6HMBcAjeCgW67kfDGFRNSgoB';
 describe('bpush.js', function () {
+    this.timeout(10000);
     var msgIds = [];
-    it.only('[pushSingleDevice] should have property response_params.msg_id', function (done) {
+    it('[pushSingleDevice] should have property response_params.msg_id', function (done) {
         var data = {
             channel_id: '5247517738736986629',
             msg: JSON.stringify({
@@ -32,7 +33,7 @@ describe('bpush.js', function () {
             done();
         }).catch(done);
     });
-    it('[pushAll]  should have property response_params.msg_id', function (done) {
+    it.only('[pushAll]  should have property response_params.msg_id', function (done) {
         var data = {
             msg: JSON.stringify({
                 aps: {
@@ -76,9 +77,10 @@ describe('bpush.js', function () {
     });
     it('[queryMsgStatus] should have property response_params.total_num', function (done) {
         var data = {
-            msg_id: '1941363116520998932'
+            msg_id: '3129074535657443828'
         };
         bpush.sendRequest(bpush.apis.queryMsgStatus, data).then(function (data) {
+            console.log(data);
             data = JSON.parse(data);
             data.should.have.property('response_params');
             var params = data.response_params;
@@ -89,6 +91,7 @@ describe('bpush.js', function () {
     it('[queryTags]  should have property response_params.total_num', function (done) {
         var data = {};
         bpush.sendRequest(bpush.apis.queryTags, data).then(function (data) {
+            console.log(data);
             data = JSON.parse(data);
             data.should.have.property('response_params');
             var params = data.response_params;
@@ -102,6 +105,7 @@ describe('bpush.js', function () {
             tag: 'testtag'
         };
         bpush.sendRequest(bpush.apis.createTag, data).then(function (data) {
+            console.log(data);
             data = JSON.parse(data);
             data.should.have.property('response_params');
             var params = data.response_params;
@@ -114,6 +118,7 @@ describe('bpush.js', function () {
             tag: 'testtag'
         };
         bpush.sendRequest(bpush.apis.deleteTag, data).then(function (data) {
+            console.log(data);
             data = JSON.parse(data);
             data.should.have.property('response_params');
             var params = data.response_params;
@@ -127,6 +132,7 @@ describe('bpush.js', function () {
             channel_ids: JSON.stringify([5247517738736986629])
         };
         bpush.sendRequest(bpush.apis.addDevicesToTag, data).then(function (data) {
+            console.log(data);
             data = JSON.parse(data);
             data.should.have.property('response_params');
             var params = data.response_params;
@@ -140,6 +146,7 @@ describe('bpush.js', function () {
             channel_ids: JSON.stringify([5247517738736986629])
         };
         bpush.sendRequest(bpush.apis.removeDevicesFromTag, data).then(function (data) {
+            console.log(data);
             data = JSON.parse(data);
             data.should.have.property('response_params');
             var params = data.response_params;
@@ -160,10 +167,11 @@ describe('bpush.js', function () {
             done();
         }).catch(done);
     });
-    it('[reportStaticDevice] should have property response_params.total_num', function (done) {
+    it.only('[reportStaticDevice] should have property response_params.total_num', function (done) {
         var data = {
         };
         bpush.sendRequest(bpush.apis.reportStaticDevice, data).then(function (data) {
+            console.log(data);
             data = JSON.parse(data);
             data.should.have.property('response_params');
             var params = data.response_params;
