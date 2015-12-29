@@ -1,12 +1,12 @@
-#百度推送NodeJS SDK
-##使用
+#百度推送NodeJS SDK   
+##使用   
 `npm install bpush-nodejs --save`
 ```javascript
 var bpush = require('bpush-nodejs');
 ...
 ```
-##说明
-SDK采用Promise方式进行回调,demo代码如下(以推送单个设备为例),catch代码块中 **只捕获HTTP请求错误,如果HTTP请求成功,但是百度服务端报错,请自行在then中处理**
+##说明   
+SDK采用Promise方式进行回调,demo代码如下(以推送单个设备为例),catch代码块中 **只捕获HTTP请求错误,如果HTTP请求成功,但是百度服务端报错,请自行在then中处理**   
 ```javascript
 var data = {
     channel_id: '5247517738736986629',
@@ -26,9 +26,8 @@ bpush.sendRequest(bpush.apis.pushMsgToSingleDevice, data).then(function (data) {
             console.error(e);
         });
 ```
-所有api调用方法均为 **bpush.sendRequest(bpush.apis.[api名称], [api需要的数据])**
-
-##api列表
+所有api调用方法均为 **bpush.sendRequest(bpush.apis.[api名称], [api需要的数据])**   
+##api列表   
 [百度官方文档](http://push.baidu.com/doc/restapi/restapi)   
 **特别说明:** 本文档写作时,百度api返回的数据以本文档为准,与官方文档有出入的地方可能是百度升级了api忘记更新文档所致.   
 + pushSingleDevice   
@@ -334,5 +333,5 @@ var data = {
     }
 }
 ```
-##作者博客
+##作者博客   
 [每天进步一点点](http://www.ddhigh.com)
