@@ -9,6 +9,9 @@ require('should');
 
 describe('bpush.js', function () {
     it('should return a object that contain request_id', function (done) {
+        bpush.setConfig('ak','百度推送ak');
+        bpush.setConfig('sk','百度推送sk');
+        bpush.setConfig('deploy_status',constant.DEPLOY_STATUS.DEVELOPMENT);
         var data = {
             channel_id: '5247517738736986629',
             msg: JSON.stringify({
