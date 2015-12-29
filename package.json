@@ -1,0 +1,32 @@
+{
+  "name": "bpush-nodejs",
+  "version": "0.0.1",
+  "description": "baidu push nodejs sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xialeistudio/bpush-nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "push"
+  ],
+  "author": "xialeistudio <xialeistudio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xialeistudio/bpush-nodejs/issues"
+  },
+  "homepage": "https://github.com/xialeistudio/bpush-nodejs#readme",
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "crypto": "0.0.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "should": "^8.0.2"
+  }
+}
