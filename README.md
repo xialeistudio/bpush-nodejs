@@ -15,9 +15,9 @@ var data = {
             alert: '你是呵呵SINGLE'
         }
     }),
-    msg_type: constant.MSG_TYPE.NOTIFICATION,
-    deploy_status: constant.DEPLOY_STATUS.DEVELOPMENT,
-    device_type: constant.DEVICE_TYPE.IOS
+    msg_type: bpush.constant.MSG_TYPE.NOTIFICATION,
+    deploy_status: bpush.constant.DEPLOY_STATUS.DEVELOPMENT,
+    device_type: bpush.constant.DEVICE_TYPE.IOS
 };
 bpush.sendRequest(bpush.apis.pushMsgToSingleDevice, data).then(function (data) {
             data = JSON.parse(data);
@@ -41,9 +41,9 @@ var data = {
         alert: '你是呵呵SINGLE'
         }
     }),
-    msg_type: constant.MSG_TYPE.NOTIFICATION,
-    deploy_status: constant.DEPLOY_STATUS.DEVELOPMENT,
-    device_type: constant.DEVICE_TYPE.IOS
+    msg_type: bpush.constant.MSG_TYPE.NOTIFICATION,
+    deploy_status: bpush.constant.DEPLOY_STATUS.DEVELOPMENT,
+    device_type: bpush.constant.DEVICE_TYPE.IOS
 };
 ```
 返回参数:
@@ -66,9 +66,9 @@ var data = {
             alert: '你是呵呵ALL'
         }
     }),
-    msg_type: constant.MSG_TYPE.NOTIFICATION,
-    deploy_status: constant.DEPLOY_STATUS.DEVELOPMENT,
-    device_type: constant.DEVICE_TYPE.IOS
+    msg_type: bpush.constant.MSG_TYPE.NOTIFICATION,
+    deploy_status: bpush.constant.DEPLOY_STATUS.DEVELOPMENT,
+    device_type: bpush.constant.DEVICE_TYPE.IOS
 };
 ```
 返回参数:
@@ -93,9 +93,9 @@ var data = {
     }),
     type: 1,//固定为1
     tag: 'test',//标签名称
-    msg_type: constant.MSG_TYPE.NOTIFICATION,
-    deploy_status: constant.DEPLOY_STATUS.DEVELOPMENT,
-    device_type: constant.DEVICE_TYPE.IOS
+    msg_type: bpush.constant.MSG_TYPE.NOTIFICATION,
+    deploy_status: bpush.constant.DEPLOY_STATUS.DEVELOPMENT,
+    device_type: bpush.constant.DEVICE_TYPE.IOS
 };
 ```
 返回参数:
