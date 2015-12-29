@@ -3,7 +3,6 @@
  */
 
 var bpush = require('../lib/bpush')
-    , constant = require('../common/constant')
     , _ = require('underscore');
 require('should');
 
@@ -20,9 +19,9 @@ describe('bpush.js', function () {
                     alert: '你是呵呵SINGLE'
                 }
             }),
-            msg_type: constant.MSG_TYPE.NOTIFICATION,
-            deploy_status: constant.DEPLOY_STATUS.DEVELOPMENT,
-            device_type: constant.DEVICE_TYPE.IOS
+            msg_type: bpush.constant.MSG_TYPE.NOTIFICATION,
+            deploy_status: bpush.constant.DEPLOY_STATUS.DEVELOPMENT,
+            device_type: bpush.constant.DEVICE_TYPE.IOS
         };
         bpush.sendRequest(bpush.apis.pushMsgToSingleDevice, data).then(function (data) {
             data = JSON.parse(data);
@@ -40,9 +39,9 @@ describe('bpush.js', function () {
                     alert: '你是呵呵ALL'
                 }
             }),
-            msg_type: constant.MSG_TYPE.NOTIFICATION,
-            deploy_status: constant.DEPLOY_STATUS.DEVELOPMENT,
-            device_type: constant.DEVICE_TYPE.IOS
+            msg_type: bpush.constant.MSG_TYPE.NOTIFICATION,
+            deploy_status: bpush.constant.DEPLOY_STATUS.DEVELOPMENT,
+            device_type: bpush.constant.DEVICE_TYPE.IOS
         };
         bpush.sendRequest(bpush.apis.pushMsgToAll, data).then(function (data) {
             data = JSON.parse(data);
@@ -62,9 +61,9 @@ describe('bpush.js', function () {
             }),
             type: 1,
             tag: 'test',
-            msg_type: constant.MSG_TYPE.NOTIFICATION,
-            deploy_status: constant.DEPLOY_STATUS.DEVELOPMENT,
-            device_type: constant.DEVICE_TYPE.IOS
+            msg_type: bpush.constant.MSG_TYPE.NOTIFICATION,
+            deploy_status: bpush.constant.DEPLOY_STATUS.DEVELOPMENT,
+            device_type: bpush.constant.DEVICE_TYPE.IOS
         };
         bpush.sendRequest(bpush.apis.pushMsgToTag, data).then(function (data) {
             data = JSON.parse(data);
