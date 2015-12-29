@@ -11,7 +11,7 @@ bpush.config.ak = '百度推送ak';
 bpush.config.sk = '百度推送sk';
 describe('bpush.js', function () {
     var msgIds = [];
-    it('[pushSingleDevice] should have property response_params.msg_id', function (done) {
+    it.only('[pushSingleDevice] should have property response_params.msg_id', function (done) {
         var data = {
             channel_id: '5247517738736986629',
             msg: JSON.stringify({
@@ -160,7 +160,7 @@ describe('bpush.js', function () {
             done();
         }).catch(done);
     });
-    it.only('[reportStaticDevice] should have property response_params.total_num', function (done) {
+    it('[reportStaticDevice] should have property response_params.total_num', function (done) {
         var data = {
         };
         bpush.sendRequest(bpush.apis.reportStaticDevice, data).then(function (data) {
